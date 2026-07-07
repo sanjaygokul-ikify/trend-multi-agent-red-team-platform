@@ -38,7 +38,10 @@ class Engine:
         for agent, strategies in tasks.items():
             for strategy in strategies:
                 for environment in self.environments:
-                    self.execute(agent, environment, strategy)
+                    try:
+                        self.execute(agent, environment, strategy)
+                    except Exception as e:
+                        self.logger.error(f"Error executing agent {agent} in environment {environment} with strategy {strategy}: {e}")
 
     def add_agent(self, agent: Agent) -> None:
         if not isinstance(agent, Agent):
