@@ -1,0 +1,17 @@
+services:
+  platform:
+    image: redis/redis-stack-server:latest
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./data:/data
+  agents:
+    image: agent-worker
+    depends_on:
+      - platform
+    environment:
+      REDIS_URL: redis://platform:6379
+  web:
+    build: ./ui
+    ports:
+      - "80:5000"
