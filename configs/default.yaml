@@ -1,0 +1,21 @@
+agents:
+  max_pool_size: 50
+  timeout_seconds: 30
+  concurrency: 20
+
+attack_patterns:
+  max_depth: 5
+  min_depth: 2
+  randomness_factor: 0.3
+
+security_metrics:
+  alert_threshold: 5
+  severity_scale: [1, 2, 3, 4, 5]
+
+kv_store:
+  redis:
+    host: localhost
+    port: 6379
+
+ml:
+  model_url: http://localhost:5000/predict
