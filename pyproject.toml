@@ -1,0 +1,15 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "multi-agent-red-team-platform"
+version = "0.1.0"
+description = "Distributed red teaming platform with autonomous agents"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+grpcio = "^1.53"
+pandas = "^2.0"
+ray = "^2.7"
