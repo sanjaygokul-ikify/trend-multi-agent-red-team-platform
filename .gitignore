@@ -1,0 +1,1 @@
+# Python\n__pycache__/\n*.py[cod]\n*$py.class\n\n# Docker\n.dockerenv\ndocker-compose.override.yml\n\n# OS\n.DS_Store\nThumbs.db\n\n# IDE\n.env\nvenv/\nenv/
